@@ -1,0 +1,407 @@
+/* astrics */
+input:focus,textarea:focus{
+    box-shadow:0 0 5px #f2545496 !important;
+    border-color: #f25454 !important ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*  */
+#nav{
+    transition: all 1s;
+    box-shadow: 0 0 2px rgba(0,0,0,.5);
+}
+.navbar-brand-sticky{
+    display: none;
+}
+.nav-stiky:hover ~#nav .navbar-toggler-icon,#nav:hover .navbar-toggler-icon{
+border: 0px  ;
+}
+.nav-stiky:hover~#nav,#nav:hover{
+    background-color: #fff !important;
+    border-color:white ;
+}
+.nav-stiky:hover ~#nav .navbar-brand,#nav:hover .navbar-brand{
+display: none;
+}
+.nav-stiky:hover ~#nav .navbar-brand-sticky,
+#nav:hover .navbar-brand-sticky 
+{
+display: block;
+}
+.nav-stiky:hover ~#nav .nav-link,
+#nav:hover .nav-link{
+    color: black;
+}
+
+
+/*  */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+}
+.navbar .collapse .nav-item a:hover{
+    color:#F25454 !important;
+}
+.navbar .collapse .nav-item  .active{
+    color:#F25454;
+}
+#home{
+    position: relative;
+}
+.img-caption1,.img-caption2,.img-caption3
+{
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.img-caption1{
+    background-image: url("../images/slideshow-1.jpg");
+}
+.img-caption2{
+    background-image: url("../images/slideshow-2.jpg");
+}
+.img-caption3{
+    background-image: url("../images/slideshow-3.jpg");
+}
+.caption{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    color: white;   
+}
+.caption h2{
+    text-align: center;
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 900 ;
+}
+#carouselExampleCaptions button{
+    width: 60px;
+    height: 50px;
+    border: 2px solid #fff;
+    position: absolute;
+    left: -4px;
+    transform: translateY(50vh);
+    border-radius: 3px;
+}
+#carouselExampleCaptions button:focus{
+    background-color: transparent !important;
+}
+#carouselExampleCaptions .carousel-control-next{
+    top: 49px ;
+}
+/*  */
+#carouselExampleCaptions button:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    left: -60px;
+    transition: all .5s;
+    border-radius: 3px;
+
+}
+#carouselExampleCaptions button:hover::after ,#carouselExampleCaptions button:hover .arrow{
+    left: 0;
+    z-index: -1;
+    color: #f25454;
+}
+
+/* .next ,.prev{
+    color: red;
+} */
+
+/*  */
+
+
+#home .setting-icon{
+    color: #fff;
+    text-align: center;
+    padding-top:13px ;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: black;
+    position: fixed;
+    top: 25%;
+    z-index: 3;
+    transition: all .5s;
+}
+#home .setting-icon:hover{
+    background-color:#BFB29C ;
+    cursor: hand;
+}
+#home {
+    position: relative;
+    /* height: 100vh; */
+}
+#home .animationSection{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    
+}
+#home .animationPart{
+    width: 35px;
+    height: 60px;
+    border-radius: 40px;
+    border: 1px solid #fff;
+    position: relative;
+    
+}
+#home .animationSection .animationPart .boltPart{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    top:15%;
+    left: 11px;
+    background-color: #fff;
+    animation-name: boltPartAnimation;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+@keyframes boltPartAnimation{
+    0%{ top: 10%; opacity: 1;}
+    30%{ top: 20%; opacity: .6;}
+    60%{ top: 40%; opacity: .4;}
+    90%{ top: 60%; opacity: .1;}
+    100%{ top: 80%; opacity: .0;}
+    
+}
+#home .animationSection:hover  .animationPart{
+    border: 1px solid #f25554;
+    cursor: hand;
+}
+#home .animationPart:hover .boltPart{
+    background-color: #f25554;
+    cursor: hand;
+}
+.aboutCaption {
+    text-align: center;
+}
+#about .aboutCaption p{
+    padding: 40px 120px;
+}
+ .back-letter{
+    font-size: 80px;
+    font-weight: 700;
+    margin-top:20px ;
+    color:#F1F1F1 ;
+}
+.front-letter{
+    font-size: 50px;
+    font-weight: 760;
+    margin-top: -65px;
+    position: relative;
+}
+.front-letter::after{
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top:70px ;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .5s;
+}
+.front-letter:hover::after{
+    width:90px ;
+}
+.progressLevel .progress{
+    height: 4px;
+    margin-top:3px ;
+}
+.progressLevel .progress .progress-bar{
+    animation-name:progress-bar-stripes ;
+    animation-duration: 2s;
+
+}
+@keyframes progress-bar-stripes {
+    0% { width:0%;}
+}
+.progressHeading .progress-value{
+    animation-name:progress-scale;
+    animation-duration: 2.5s;
+}
+@keyframes progress-scale{
+    0% { opacity: 0;}
+    50%{ opacity: 0;}
+    90%{ opacity: .8;}
+    100% { opacity: 1;}
+}
+#team .row .teamMemberPart {
+    position: relative;
+    overflow: hidden;
+}
+#team .row .teamMemberPart img{
+   transition: all .4s;
+}
+#team .teamMember:hover img{
+    transform: scale(1.1);
+}
+#team .row .teamMemberPart .memberIcons i{
+    color: white;
+}
+#team .row .teamMemberPart .memberIcons{
+    background-color:rgba(242, 84, 84, 0.85) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .5s;
+    
+}
+
+#team .teamMember:hover .memberIcons{
+    opacity: 1;
+    border-radius: 20px;
+}
+#team .teamMember:hover h5{
+    color:#f25454d9 ;
+}
+.container .ideas h3{
+    font-size:40px ;
+    font-weight: 700;
+}
+.container  .contactUs button {
+    color: #fff;
+    background-color: #f25454 ;
+    border:none;
+    padding: 11px 25px;
+    border-radius: 4px;
+}
+.container  .contactUs button:hover{
+    background-color:rgba(242, 84, 84, 0.85) ;
+}
+#services{
+    background-color:#FAFAFA ;
+}
+#services .servicesPart .part1 i{
+    color:#f25454 ;
+}
+#services .servicesPart .part2{
+    color:#666 ;
+}
+#services .servicesPart:hover  h4{
+    color: #f25454;
+}
+.contactCaption a:hover p{
+    color: #f25454;
+    cursor: hand;
+}
+.carousel-item .carouselpart img{
+    width: 11%;
+    margin: auto;
+}
+.carousel-item .carouselpart .carouselTag{
+    padding: 20px;
+}
+.carousel-item .carouselpart .carouselCaption p,.quote{
+    color:#666 ;
+    font-size: 30px;
+}
+#carouselExampleControls {
+    width:80% ;
+    margin: auto;
+    padding: 30px;
+}
+#contact{
+    background-color: #FAFAFA;
+}
+#contact .contactIcons .contactIco .icContact{
+    color: #f25454;
+}
+#contact .contactPart:hover h4{
+    color: #f25454;
+}
+#contact .form button{
+    color: #fff;
+    background-color: #f25454;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+}
+#contact .form button:hover {
+    background-color:#f38383 ;
+}
+#footer{
+    background-color: #222222;
+    color: #f2f2f2;
+    position: relative;
+}
+#footer .filterImg{
+    background-image:url(../images/dotted-map.png);
+    background-size: 40%;
+}
+#footer .footerPart h3{
+    color: #fff;
+    font-size: 23px;
+    font-weight: 900;
+}
+.footerbuttons .tag {
+    border: 1px solid #fff;
+    padding: 6px 10px;
+    margin: 5px 3px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+.footerbuttons .tag:hover{
+    color: #f25454;
+    border-color:#f25454 ;
+}
+#footer .arrowUp {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #f25454a4;
+    text-align: center;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+}
+.arrowUp i{
+    line-height: 45px;
+}
+#footer .arrowUp:hover{
+    background-color:#f25454 ;
+}
+.endPart .iconPart i{
+    margin-right: 20px;
+}
+.endPart .iconPart i:hover {
+    color: #f25454;
+    cursor: hand;
+}
+.angora p .angora1:hover{
+    color: #f25454 !important;
+}
+
+
+
+
+
+
+@media screen and (max-width:576) {
+    .caption h2{
+        font-size: 46px;
+    }
+}
